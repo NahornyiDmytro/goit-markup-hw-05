@@ -634,6 +634,10 @@ background-color: #FFFFFF;
     visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -100%);
+}
+
 .modal {
     position: absolute;
     top: 50%;
