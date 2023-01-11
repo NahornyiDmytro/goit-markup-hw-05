@@ -63,6 +63,7 @@ body {
     color:var(--title-text-color);
     margin-right: 77px;
     text-transform: uppercase;
+    padding-top: 24px;
     padding-bottom: 24px;
 }
 
@@ -71,7 +72,7 @@ body {
 }
 
 .header {
-    padding-top: 24px;
+    border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -89,6 +90,9 @@ body {
 }
 
 .header-nav-link {
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -110,9 +114,10 @@ body {
 }
 
 .header-nav-link.current::after {
-    display: block;
+    position: absolute;
     content: "";
-    margin-top: 20px;
+    bottom:-4px;
+    left: 0;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -127,7 +132,6 @@ body {
 .contacts {
     display: flex;
     margin-left: auto;
-    padding-bottom: 24px;
 }
 
 .contacts-link {
@@ -139,6 +143,8 @@ body {
     transition-property: color;
     transition-duration: var(--tr-duration);
     transition-timing-function: var(--tr-tm-func);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .contacts-link:hover,
@@ -597,10 +603,14 @@ background-color: #FFFFFF;
     background-color: var(--accent-color);
     transform: translateY(100%);
     transition: transform var(--tr-duration) var(--tr-tm-func), opacity var(--tr-duration) var(--tr-tm-func);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 40px;
 }
 
-.item:hover .portfolio-overlay,
-.item:focus .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
     transform: translateY(0);
     opacity: 1;
     width: 100%;
@@ -608,9 +618,6 @@ background-color: #FFFFFF;
 }
 
 .portfolio-overlay-text {
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
